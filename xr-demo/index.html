@@ -1,13 +1,24 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+<body>
+  <!-- <a-scene vr-mode-ui="enabled: true" webxr> uncomment this to support VR headsets-->
+  <a-scene>
+    <!-- wet street model -->
+    <a-entity 
+      obj-model="obj: url(/models/simplestreet.obj)"
+      scale="1 1 1"
+    >
+    </a-entity>    
+    <!-- Sky -->
+    <a-sky color="#87CEEB"></a-sky>
+    
+    <!-- Camera with movement -->
+    <a-entity id="cameraRig" position="0 1.6 3">
+      <a-camera wasd-controls look-controls></a-camera>
+    </a-entity>
+  </a-scene>
+</body>
 </html>
