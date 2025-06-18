@@ -12,6 +12,29 @@
       position="5 0 -10">
     </a-entity>
 
+    <!-- Simple person (placeholder)  -->
+    <a-entity 
+      gltf-model="/models/Wet Street(Evening).gltf"
+      scale="10 10 10"
+      position="5 0 -10">
+    </a-entity>
+    
+    <a-cylinder 
+      id="person"
+      position="0 1 -15"
+      radius="0.5" 
+      height="2" 
+      color="#FFE5B4"
+      animation="property: position; to: 0 1 -8; dur: 4000; autoplay: true">
+    </a-cylinder>
+    
+    <a-sphere 
+      position="0 2.5 -15"
+      radius="0.3"
+      color="#FFE5B4"
+      animation="property: position; to: 0 2.5 -8; dur: 4000; autoplay: true">
+    </a-sphere>
+
     <a-sky color="#87CEEB"></a-sky>
     <a-camera wasd-controls look-controls></a-camera>
   </a-scene>
