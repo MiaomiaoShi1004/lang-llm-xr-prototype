@@ -4,21 +4,16 @@
   <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
 </head>
 <body>
-  <!-- <a-scene vr-mode-ui="enabled: true" webxr> uncomment this to support VR headsets-->
   <a-scene>
-    <!-- wet street model -->
+
     <a-entity 
-      obj-model="obj: url(/models/simplestreet.obj)"
-      scale="1 1 1"
-    >
-    </a-entity>    
-    <!-- Sky -->
-    <a-sky color="#87CEEB"></a-sky>
-    
-    <!-- Camera with movement -->
-    <a-entity id="cameraRig" position="0 1.6 3">
-      <a-camera wasd-controls look-controls></a-camera>
+      gltf-model="/models/Wet Street(Evening).gltf"
+      scale="10 10 10"
+      position="5 0 -10">
     </a-entity>
+
+    <a-sky color="#87CEEB"></a-sky>
+    <a-camera wasd-controls look-controls></a-camera>
   </a-scene>
 </body>
 </html>
