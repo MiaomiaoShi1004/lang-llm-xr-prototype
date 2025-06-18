@@ -5,38 +5,64 @@
 </head>
 <body>
   <a-scene>
-
-    <a-entity 
-      gltf-model="/models/Wet Street(Evening).gltf"
-      scale="10 10 10"
-      position="5 0 -10">
-    </a-entity>
-
-    <!-- Simple person (placeholder)  -->
+    <!-- Your existing scene -->
     <a-entity 
       gltf-model="/models/Wet Street(Evening).gltf"
       scale="10 10 10"
       position="5 0 -10">
     </a-entity>
     
+    <!-- Character -->
     <a-cylinder 
       id="person"
-      position="0 1 -15"
+      position="-2 1 -8"
       radius="0.5" 
       height="2" 
-      color="#FFE5B4"
-      animation="property: position; to: 0 1 -8; dur: 4000; autoplay: true">
+      color="#FFE5B4">
     </a-cylinder>
     
     <a-sphere 
-      position="0 2.5 -15"
+      position="-2 2.5 -8"
       radius="0.3"
-      color="#FFE5B4"
-      animation="property: position; to: 0 2.5 -8; dur: 4000; autoplay: true">
+      color="#FFE5B4">
     </a-sphere>
-
+    
+    <a-text 
+      id="help-btn"
+      position="-1 3 -5"
+      value="HELP"
+      color="white"
+      background="color: red; opacity: 0.8"
+      geometry="primitive: plane; width: 2; height: 0.5"
+      onclick="helpPerson()">
+    </a-text>
+    
+    <a-text 
+      id="call-btn"
+      position="1 3 -5"
+      value="CALL 911"
+      color="white"
+      background="color: blue; opacity: 0.8"
+      geometry="primitive: plane; width: 2; height: 0.5"
+      onclick="callEmergency()">
+    </a-text>
+    
     <a-sky color="#87CEEB"></a-sky>
     <a-camera wasd-controls look-controls></a-camera>
   </a-scene>
+
+  <script>
+    function helpPerson() {
+      // LLM logic here
+      console.log("Helping person...");
+      // Spawn medical supplies
+    }
+    
+    function callEmergency() {
+      // LLM logic here  
+      console.log("Calling 911...");
+      // Show phone interface
+    }
+  </script>
 </body>
 </html>
